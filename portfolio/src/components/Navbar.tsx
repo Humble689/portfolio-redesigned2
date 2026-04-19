@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 
 const links = [
   { label: 'About', href: '#about' },
@@ -36,8 +37,17 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-display font-bold text-lg text-white hover:text-gold-400 transition-colors">
-          LMT<span className="text-gold-400">.</span>
+        <a
+          href="#"
+          className="group inline-flex items-center gap-2 font-display font-bold text-lg text-white transition-colors hover:text-gold-300"
+          aria-label="LMT home"
+        >
+          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gold-500/40 bg-gold-500/10 text-gold-300 shadow-[0_0_18px_rgba(245,158,11,0.25)] transition-all duration-300 group-hover:scale-105 group-hover:border-gold-400/70 group-hover:shadow-[0_0_24px_rgba(245,158,11,0.45)]">
+            <Sparkles size={15} strokeWidth={2.3} />
+          </span>
+          <span>
+            LMT<span className="text-gold-400">.</span>
+          </span>
         </a>
 
         {/* Desktop nav */}

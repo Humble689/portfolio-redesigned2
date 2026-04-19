@@ -57,10 +57,10 @@ export default function Contact() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
-            {/* Left — info */}
+            {/* Left info */}
             <div className="space-y-8">
               <p className="text-slate-300 leading-relaxed">
-                I'm open to full-time roles, internships, freelance work, and collaborative projects — especially
+                I'm open to full-time roles, internships, freelance work, and collaborative projects, especially
                 in full-stack development, cybersecurity, or AI systems. If you have a problem that needs
                 solving, let's talk.
               </p>
@@ -94,7 +94,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Right — form */}
+            {/* Right form */}
             <motion.form
               onSubmit={handleSubmit}
               initial={{ opacity: 0, x: 20 }}

@@ -1,4 +1,4 @@
-# Lufene Mark Travis — Portfolio
+# Lufene Mark Travis Portfolio
 
 Modern developer portfolio built with **React + TypeScript + Tailwind CSS + Framer Motion**.
 
@@ -31,7 +31,7 @@ npm run preview    # preview the production build
 1. Push this folder to a GitHub repo
 2. Go to [vercel.com](https://vercel.com) → New Project → Import that repo
 3. Framework: **Vite** (auto-detected)
-4. Click **Deploy** — done ✅
+4. Click **Deploy** and you're done ✅
 
 ## 🌐 Deploy to Netlify
 
@@ -49,7 +49,7 @@ All content lives in one file:
 src/data/content.ts
 ```
 
-Edit `personal`, `about`, `skills`, `projects`, `experience`, `education`, and `certifications` there — no need to touch any component files.
+Edit `personal`, `about`, `skills`, `projects`, `experience`, `education`, and `certifications` there. No need to touch any component files.
 
 ## 📬 Contact Form
 

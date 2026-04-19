@@ -3,7 +3,7 @@ export const personal = {
   title: 'Software Developer & CS Graduate',
   location: 'Kampala, Uganda',
   email: 'marktravis689@gmail.com',
-  tagline: 'Building secure, intelligent systems — from full-stack web applications to ML-powered infrastructure tools — with a focus on real-world impact across Africa.',
+  tagline: 'Building secure, intelligent systems, from full-stack web applications to ML-powered infrastructure tools, with a focus on real-world impact across Africa.',
   github: 'https://github.com/Humble689',
   linkedin: 'https://www.linkedin.com/in/lufene-mark-travis-97679134b',
   kaggle: 'https://www.kaggle.com/marktravis689',
@@ -14,7 +14,7 @@ export const personal = {
 export const about = {
   bio: `I'm a Computer Science graduate from Uganda Christian University with a passion for turning complex engineering challenges into clean, working systems. My foundation spans full-stack web development, cybersecurity, AI/ML, and enterprise networking.
 
-What drives me is building things that matter — whether that's a machine-learning intrusion detection system protecting SME networks, a gym management platform for a business in South Sudan, or contributing to data quality for international research. I bring an infrastructure-first mindset: reliability, security, and scalability from the ground up.`,
+What drives me is building things that matter, whether that's a machine-learning intrusion detection system protecting SME networks, a gym management platform for a business in South Sudan, or contributing to data quality for international research. I bring an infrastructure-first mindset: reliability, security, and scalability from the ground up.`,
   highlights: [
     { label: 'Projects Built', value: '10+' },
     { label: 'Repositories', value: '54' },
@@ -59,7 +59,7 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: 'Vanguard — ML Network Intrusion Detection System',
+    title: 'Vanguard: ML Network Intrusion Detection System',
     description: 'A hybrid machine learning–powered NIDS targeting Ugandan SMEs. Combines supervised and unsupervised models to detect known and zero-day threats by analyzing network traffic in real time with a React/WebSocket dashboard.',
     tags: ['Python', 'Scikit-learn', 'FastAPI', 'React', 'Scapy', 'Wireshark'],
     github: 'https://github.com/Group-Firewall/Vanguard',
@@ -75,7 +75,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'Job Portal — Full-Stack Platform',
+    title: 'Job Portal: Full-Stack Platform',
     description: 'A full-stack web application connecting job seekers with employers through a streamlined, role-based interface. Features user authentication, job listings management, and application tracking.',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript'],
     github: 'https://github.com/Humble689/JobPortalFullStack_689689',
