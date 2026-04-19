@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { BrainCircuit, Globe, Handshake } from 'lucide-react';
+import { BrainCircuit, Globe, Users } from 'lucide-react';
 import { experience, certifications } from '../data/content';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const certificationIcons = {
   networking: Globe,
   ai: BrainCircuit,
-  collaboration: Handshake,
+  collaboration: Users,
 } as const;
 
 const typeColors: Record<string, string> = {
