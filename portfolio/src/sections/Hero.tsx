@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { personal } from '../data/content';
 
 const stagger = {
@@ -86,8 +86,9 @@ export default function Hero() {
           </motion.p>
 
           {/* Location */}
-          <motion.p variants={stagger.item} className="text-slate-500 font-mono text-sm mb-8">
-            📍 Kampala, Uganda
+          <motion.p variants={stagger.item} className="text-slate-500 font-mono text-sm mb-8 inline-flex items-center gap-2">
+            <MapPin size={14} className="text-gold-400" />
+            <span>Kampala, Uganda</span>
           </motion.p>
 
           {/* Tagline */}

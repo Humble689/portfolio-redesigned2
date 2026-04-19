@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
+import { BrainCircuit, Globe, Handshake } from 'lucide-react';
 import { experience, certifications } from '../data/content';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+
+const certificationIcons = {
+  networking: Globe,
+  ai: BrainCircuit,
+  collaboration: Handshake,
+} as const;
 
 const typeColors: Record<string, string> = {
   Internship: 'text-blue-400 bg-blue-400/10 border-blue-400/20',
@@ -84,7 +91,10 @@ export default function Experience() {
               Certifications
             </h3>
             <div className="grid sm:grid-cols-3 gap-4">
-              {certifications.map((cert, i) => (
+              {certifications.map((cert, i) => {
+                const Icon = certificationIcons[cert.iconKey as keyof typeof certificationIcons] ?? Globe;
+
+                return (
                 <motion.div
                   key={cert.name}
                   initial={{ opacity: 0, y: 16 }}
@@ -93,13 +103,16 @@ export default function Experience() {
                   transition={{ delay: i * 0.1, duration: 0.4 }}
                   className="card-glass p-5 flex items-center gap-4 hover:border-gold-500/20 transition-colors duration-300"
                 >
-                  <span className="text-3xl">{cert.icon}</span>
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-300">
+                    <Icon size={20} />
+                  </span>
                   <div>
                     <p className="text-white font-semibold text-sm">{cert.name}</p>
                     <p className="text-slate-500 text-xs font-mono">{cert.issuer}</p>
                   </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

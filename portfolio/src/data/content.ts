@@ -27,32 +27,32 @@ export const skills = [
   {
     category: 'Languages',
     items: ['Python', 'JavaScript', 'SQL', 'C', 'HTML/CSS', 'LaTeX'],
-    icon: '⌨️',
+    iconKey: 'languages',
   },
   {
     category: 'Frontend',
     items: ['React', 'Tailwind CSS', 'Responsive Design', 'UI/UX'],
-    icon: '🎨',
+    iconKey: 'frontend',
   },
   {
     category: 'Backend & Data',
     items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Scikit-learn', 'TensorFlow', 'Pandas'],
-    icon: '⚙️',
+    iconKey: 'backend',
   },
   {
     category: 'AI & Automation',
     items: ['Agentic AI', 'Machine Learning', 'Data Analysis', 'NLP', 'Workflow Automation'],
-    icon: '🤖',
+    iconKey: 'ai',
   },
   {
     category: 'Networking & Security',
     items: ['Cisco Enterprise Networking', 'Network Security', 'VPN Configuration', 'System Administration', 'Wireshark'],
-    icon: '🔒',
+    iconKey: 'security',
   },
   {
     category: 'Tools & DevOps',
     items: ['Git/GitHub', 'VS Code', 'Docker', 'Linux', 'Firebase', 'Vite'],
-    icon: '🛠️',
+    iconKey: 'devops',
   },
 ];
 
@@ -198,7 +198,7 @@ export const education = [
 ];
 
 export const certifications = [
-  { name: 'Enterprise Networking', issuer: 'Cisco', icon: '🌐' },
-  { name: 'Agentic AI', issuer: 'Udemy', icon: '🤖' },
-  { name: 'Conflict Resolution', issuer: 'Udemy', icon: '🤝' },
+  { name: 'Enterprise Networking', issuer: 'Cisco', iconKey: 'networking' },
+  { name: 'Agentic AI', issuer: 'Udemy', iconKey: 'ai' },
+  { name: 'Conflict Resolution', issuer: 'Udemy', iconKey: 'collaboration' },
 ];

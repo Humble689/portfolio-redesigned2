@@ -1,6 +1,16 @@
 import { motion } from 'framer-motion';
+import { Braces, BrainCircuit, LockKeyhole, Monitor, ServerCog, Wrench } from 'lucide-react';
 import { skills } from '../data/content';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+
+const skillIcons = {
+  languages: Braces,
+  frontend: Monitor,
+  backend: ServerCog,
+  ai: BrainCircuit,
+  security: LockKeyhole,
+  devops: Wrench,
+} as const;
 
 export default function Skills() {
   const ref = useScrollReveal();
@@ -19,7 +29,10 @@ export default function Skills() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((group, i) => (
+            {skills.map((group, i) => {
+              const Icon = skillIcons[group.iconKey as keyof typeof skillIcons] ?? Braces;
+
+              return (
               <motion.div
                 key={group.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -29,7 +42,9 @@ export default function Skills() {
                 className="card-glass p-6 hover:border-gold-500/20 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl">{group.icon}</span>
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-gold-500/30 bg-gold-500/10 text-gold-300">
+                    <Icon size={18} />
+                  </span>
                   <h3 className="font-display font-bold text-white text-lg group-hover:text-gold-300 transition-colors">
                     {group.category}
                   </h3>
@@ -42,7 +57,8 @@ export default function Skills() {
                   ))}
                 </div>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
