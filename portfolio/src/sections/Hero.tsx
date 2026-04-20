@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, BrainCircuit, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
+import { ArrowDown, BrainCircuit, Download, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
 import { personal } from '../data/content';
 
 const stagger = {
@@ -108,25 +108,33 @@ export default function Hero() {
           {/* CTAs */}
           <motion.div
             variants={stagger.item}
-            className="flex flex-wrap gap-3 justify-center mb-16"
+            className="flex flex-wrap items-center justify-center gap-3 mb-16"
           >
             <a
               href="#projects"
-              className="px-6 py-3 bg-gold-500 text-ink-950 font-semibold rounded-xl hover:bg-gold-400 transition-all duration-200 hover:shadow-lg hover:shadow-gold-500/20 hover:-translate-y-0.5"
+              className="order-1 inline-flex items-center justify-center px-6 py-3 bg-gold-500 text-ink-950 font-semibold rounded-xl hover:bg-gold-400 transition-all duration-200 hover:shadow-lg hover:shadow-gold-500/20 hover:-translate-y-0.5"
             >
               View Projects
             </a>
             <a
+              href="/Lufene_Mark_Travis_Resume.pdf"
+              download="Lufene_Mark_Travis_Resume.pdf"
+              className="order-2 inline-flex items-center justify-center gap-2 px-6 py-3 bg-ink-800 text-white font-semibold rounded-xl border border-ink-600 hover:border-gold-500/40 hover:bg-ink-700 transition-all duration-200 hover:-translate-y-0.5"
+            >
+              <Download size={16} />
+              Download CV
+            </a>
+            <a
               href="#contact"
-              className="px-6 py-3 bg-ink-800 text-white font-semibold rounded-xl border border-ink-600 hover:border-gold-500/40 hover:bg-ink-700 transition-all duration-200 hover:-translate-y-0.5"
+              className="order-3 inline-flex items-center justify-center px-6 py-3 bg-ink-800 text-white font-semibold rounded-xl border border-ink-600 hover:border-gold-500/40 hover:bg-ink-700 transition-all duration-200 hover:-translate-y-0.5"
             >
               Get In Touch
             </a>
           </motion.div>
 
           {/* Social links */}
-          <motion.div variants={stagger.item} className="flex items-center justify-center gap-6">
-            <div className="h-px w-16 bg-ink-700" />
+          <motion.div variants={stagger.item} className="mb-12 sm:mb-0 flex items-center justify-center gap-3 sm:gap-6 px-4">
+            <div className="hidden sm:block h-px w-16 bg-ink-700" />
             {[
               { icon: Github, href: personal.github, label: 'GitHub' },
               { icon: Linkedin, href: personal.linkedin, label: 'LinkedIn' },
@@ -138,23 +146,23 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="text-slate-500 hover:text-gold-400 transition-colors duration-200"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:text-gold-400 hover:bg-ink-800/60 transition-colors duration-200"
               >
                 <Icon size={18} />
               </a>
             ))}
-            <div className="h-px w-16 bg-ink-700" />
+            <div className="hidden sm:block h-px w-16 bg-ink-700" />
           </motion.div>
         </motion.div>
       </div>
 
       {/* Scroll cue */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 sm:gap-2 text-slate-600 pointer-events-none"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
+        <span className="text-[10px] sm:text-xs font-mono tracking-[0.22em] uppercase">Scroll</span>
         <ArrowDown size={14} />
       </motion.div>
     </section>

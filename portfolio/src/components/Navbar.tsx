@@ -29,21 +29,22 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
 
   useEffect(() => {
     const handleScrollActive = () => {
-      // Find which section is currently in view
+      // Pick the last section whose top has crossed a viewport threshold.
+      const threshold = window.scrollY + window.innerHeight * 0.35;
+      let current = '';
+
       for (const link of links) {
-        const sectionId = link.href.slice(1); // Remove '#' from href
+        const sectionId = link.href.slice(1);
         const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // If section is in viewport (within 150px of top for better detection)
-          if (rect.top <= 150 && rect.bottom > 0) {
-            setActive(link.href);
-            break;
-          }
+        if (element && element.offsetTop <= threshold) {
+          current = link.href;
         }
       }
+
+      setActive(current);
     };
 
+    handleScrollActive();
     window.addEventListener('scroll', handleScrollActive, { passive: true });
     return () => window.removeEventListener('scroll', handleScrollActive);
   }, []);
@@ -177,38 +178,42 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
               theme === 'dark' ? 'bg-ink-900/95 border-ink-700' : 'bg-white/95 border-slate-200'
             }`}
           >
-            <ul className="px-6 py-4 flex flex-col gap-4">
+            <ul className="px-6 py-4 flex flex-col gap-3">
               {links.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={() => handleNav(link.href)}
-                    className={`block font-medium transition-colors ${
-                      theme === 'dark' ? 'text-slate-300 hover:text-gold-400' : 'text-slate-700 hover:text-gold-700'
+                    className={`block rounded-lg px-2.5 py-2 font-medium transition-colors ${
+                      active === link.href
+                        ? 'text-gold-500 bg-gold-500/10'
+                        : theme === 'dark'
+                          ? 'text-slate-300 hover:text-gold-400'
+                          : 'text-slate-700 hover:text-gold-700'
                     }`}
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
-              <li>
+              <li className="mt-1 grid grid-cols-2 gap-2">
                 <a
                   href="/Lufene_Mark_Travis_Resume.pdf"
                   download="Lufene_Mark_Travis_Resume.pdf"
-                  className={`inline-flex items-center gap-2 font-medium transition-colors ${
-                    theme === 'dark' ? 'text-slate-300 hover:text-gold-400' : 'text-slate-700 hover:text-gold-700'
+                  className={`inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                    theme === 'dark'
+                      ? 'border border-ink-600 bg-ink-800 text-slate-200 hover:border-gold-500/40'
+                      : 'border border-slate-300 bg-white text-slate-700 hover:border-gold-500/40'
                   }`}
                 >
-                  <Download size={16} />
-                  Download CV
+                  <Download size={15} />
+                  CV
                 </a>
-              </li>
-              <li>
                 <a
                   href="mailto:marktravis689@gmail.com"
-                  className={`font-medium ${theme === 'dark' ? 'text-gold-400' : 'text-gold-700'}`}
+                  className="inline-flex items-center justify-center rounded-lg border border-gold-500/50 px-3 py-2.5 text-sm font-medium text-gold-400 hover:bg-gold-500/10 transition-colors"
                 >
-                  Hire Me →
+                  Hire Me
                 </a>
               </li>
             </ul>
