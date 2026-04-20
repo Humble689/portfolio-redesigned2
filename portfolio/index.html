@@ -8,10 +8,9 @@
       (function () {
         try {
           var savedTheme = localStorage.getItem('portfolio-theme');
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
           var resolvedTheme = savedTheme === 'light' || savedTheme === 'dark'
             ? savedTheme
-            : (prefersDark ? 'dark' : 'light');
+            : 'dark';
 
           document.documentElement.classList.remove('light', 'dark');
           document.documentElement.classList.add(resolvedTheme);

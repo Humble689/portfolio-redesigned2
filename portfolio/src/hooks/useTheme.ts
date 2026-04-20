@@ -14,7 +14,7 @@ function getInitialTheme(): Theme {
     return saved;
   }
 
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'dark';
 }
 
 export function useTheme() {
