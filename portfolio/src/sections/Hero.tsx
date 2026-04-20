@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, BrainCircuit, Download, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
+import { BrainCircuit, Download, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
 import { personal } from '../data/content';
 
 const stagger = {
@@ -155,16 +155,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll cue */}
-      <motion.div
-        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 sm:gap-2 text-slate-600 pointer-events-none"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <span className="text-[10px] sm:text-xs font-mono tracking-[0.22em] uppercase">Scroll</span>
-        <ArrowDown size={14} />
-      </motion.div>
     </section>
   );
 }
