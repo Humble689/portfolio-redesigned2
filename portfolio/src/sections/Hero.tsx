@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ArrowDown, BrainCircuit, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
 import { personal } from '../data/content';
 
 const stagger = {
@@ -61,10 +61,16 @@ export default function Hero() {
         >
           {/* Badge */}
           <motion.div variants={stagger.item} className="mb-6 flex justify-center">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ink-800 border border-gold-500/20 rounded-full text-sm font-mono text-gold-400">
-              <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-              Available for opportunities
-            </span>
+            <div className="inline-flex items-center gap-3 rounded-full border border-slate-200/80 bg-white/85 px-4 py-2 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur-md dark:border-cyan-400/20 dark:bg-slate-950/70 dark:shadow-[0_0_30px_rgba(34,211,238,0.08)]">
+              <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-slate-300/80 bg-slate-50 text-slate-700 dark:border-cyan-400/25 dark:bg-cyan-400/10 dark:text-cyan-300">
+                <BrainCircuit size={16} />
+                <span className="absolute inset-0 rounded-full border border-white/40 animate-pulse dark:border-cyan-300/20" />
+              </span>
+              <span className="text-sm font-medium text-slate-700 dark:text-slate-100">
+                Available for opportunities
+              </span>
+              <Sparkles size={14} className="text-amber-500/70 dark:text-cyan-300/70" />
+            </div>
           </motion.div>
 
           {/* Name */}

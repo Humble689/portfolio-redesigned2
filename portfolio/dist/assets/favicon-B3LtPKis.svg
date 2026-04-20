@@ -8,6 +8,6 @@
   <rect x="4" y="4" width="56" height="56" rx="16" fill="#0A0E17" />
   <rect x="5.5" y="5.5" width="53" height="53" rx="14.5" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.85" />
 
-  <path d="M18 18v28h18v-6H25V18z" fill="url(#gold)" />
-  <path d="M39 46V18h7l4 9 4-9h7v28h-6V29l-5 11-5-11v17z" fill="#F8FAFC" opacity="0.94" />
+  <path d="M17 20h6v18h8v6H17z" fill="url(#gold)" />
+  <path d="M31 44V20h5l4 9 4-9h5v24h-5V31l-4 8-4-8v13z" fill="#F8FAFC" opacity="0.96" />
 </svg>

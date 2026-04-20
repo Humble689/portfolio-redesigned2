@@ -7,12 +7,15 @@ import Experience from './sections/Experience';
 import Education from './sections/Education';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
+import { useTheme } from './hooks/useTheme';
 import './styles/index.css';
 
 export default function App() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className="grain min-h-screen">
-      <Navbar />
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
+import { Moon, Sparkles, Sun } from 'lucide-react';
+import type { Theme } from '../hooks/useTheme';
 
 const links = [
   { label: 'About', href: '#about' },
@@ -10,7 +11,12 @@ const links = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar() {
+type NavbarProps = {
+  theme: Theme;
+  onToggleTheme: () => void;
+};
+
+export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState('');
@@ -32,14 +38,20 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-ink-950/90 backdrop-blur-md border-b border-ink-700/50' : ''
+        scrolled
+          ? theme === 'dark'
+            ? 'bg-ink-950/90 backdrop-blur-md border-b border-ink-700/50'
+            : 'bg-white/85 backdrop-blur-md border-b border-slate-200/80 shadow-[0_6px_24px_rgba(15,23,42,0.06)]'
+          : ''
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <a
           href="#"
-          className="group inline-flex items-center gap-2 font-display font-bold text-lg text-white transition-colors hover:text-gold-300"
+          className={`group inline-flex items-center gap-2 font-display font-bold text-lg transition-colors ${
+            theme === 'dark' ? 'text-white hover:text-gold-300' : 'text-slate-900 hover:text-gold-700'
+          }`}
           aria-label="LMT home"
         >
           <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gold-500/40 bg-gold-500/10 text-gold-300 shadow-[0_0_18px_rgba(245,158,11,0.25)] transition-all duration-300 group-hover:scale-105 group-hover:border-gold-400/70 group-hover:shadow-[0_0_24px_rgba(245,158,11,0.45)]">
@@ -58,13 +70,31 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => handleNav(link.href)}
                 className={`text-sm font-body font-medium transition-colors hover-underline ${
-                  active === link.href ? 'text-gold-400' : 'text-slate-400 hover:text-white'
+                  active === link.href
+                    ? 'text-gold-500'
+                    : theme === 'dark'
+                      ? 'text-slate-400 hover:text-white'
+                      : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 {link.label}
               </a>
             </li>
           ))}
+          <li>
+            <button
+              type="button"
+              onClick={onToggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-xl border transition-all duration-200 ${
+                theme === 'dark'
+                  ? 'border-ink-600 bg-ink-800 text-gold-300 hover:border-gold-500/40 hover:bg-ink-700'
+                  : 'border-slate-300 bg-white text-slate-700 hover:border-gold-500/40 hover:text-gold-700'
+              }`}
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+          </li>
           <li>
             <a
               href="mailto:marktravis689@gmail.com"
@@ -76,15 +106,29 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          aria-label="Toggle menu"
-        >
-          <span className={`w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`w-5 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-        </button>
+        <div className="md:hidden flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            className={`inline-flex h-9 w-9 items-center justify-center rounded-lg border transition-colors ${
+              theme === 'dark'
+                ? 'border-ink-600 bg-ink-800 text-gold-300'
+                : 'border-slate-300 bg-white text-slate-700'
+            }`}
+          >
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="flex flex-col gap-1.5 p-2"
+            aria-label="Toggle menu"
+          >
+            <span className={`w-5 h-0.5 transition-all duration-300 ${theme === 'dark' ? 'bg-white' : 'bg-slate-800'} ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`w-5 h-0.5 transition-all duration-300 ${theme === 'dark' ? 'bg-white' : 'bg-slate-800'} ${mobileOpen ? 'opacity-0' : ''}`} />
+            <span className={`w-5 h-0.5 transition-all duration-300 ${theme === 'dark' ? 'bg-white' : 'bg-slate-800'} ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -94,7 +138,9 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-ink-900/95 backdrop-blur-md border-b border-ink-700"
+            className={`md:hidden backdrop-blur-md border-b ${
+              theme === 'dark' ? 'bg-ink-900/95 border-ink-700' : 'bg-white/95 border-slate-200'
+            }`}
           >
             <ul className="px-6 py-4 flex flex-col gap-4">
               {links.map((link) => (
@@ -102,14 +148,19 @@ export default function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => handleNav(link.href)}
-                    className="block text-slate-300 hover:text-gold-400 font-medium transition-colors"
+                    className={`block font-medium transition-colors ${
+                      theme === 'dark' ? 'text-slate-300 hover:text-gold-400' : 'text-slate-700 hover:text-gold-700'
+                    }`}
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
               <li>
-                <a href="mailto:marktravis689@gmail.com" className="text-gold-400 font-medium">
+                <a
+                  href="mailto:marktravis689@gmail.com"
+                  className={`font-medium ${theme === 'dark' ? 'text-gold-400' : 'text-gold-700'}`}
+                >
                   Hire Me →
                 </a>
               </li>

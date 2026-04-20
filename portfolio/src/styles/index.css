@@ -9,11 +9,17 @@
 
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
   }
 
   body {
     @apply bg-ink-950 text-white font-body antialiased;
     overflow-x: hidden;
+    transition: background-color 240ms ease, color 240ms ease;
   }
 
   ::selection {
@@ -129,4 +135,79 @@
   70% { transform: translate(0%, 15%); }
   80% { transform: translate(3%, 35%); }
   90% { transform: translate(-10%, 10%); }
+}
+
+/* Light mode palette remap */
+html.light body {
+  background: #f4f7fb;
+  color: #0f172a;
+}
+
+html.light .bg-ink-950 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-ink-900 {
+  background-color: #eef3f9 !important;
+}
+
+html.light .bg-ink-900\/95 {
+  background-color: rgba(238, 243, 249, 0.95) !important;
+}
+
+html.light .bg-ink-800 {
+  background-color: #e5edf6 !important;
+}
+
+html.light .bg-ink-800\/50 {
+  background-color: rgba(229, 237, 246, 0.68) !important;
+}
+
+html.light .bg-ink-700 {
+  background-color: #dce6f3 !important;
+}
+
+html.light .bg-ink-700\/30 {
+  background-color: rgba(220, 230, 243, 0.55) !important;
+}
+
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .text-slate-500,
+html.light .text-slate-600 {
+  color: #64748b !important;
+}
+
+html.light .border-ink-800,
+html.light .border-ink-700,
+html.light .border-ink-700\/50,
+html.light .border-ink-600,
+html.light .border-ink-600\/50 {
+  border-color: #cfd9e6 !important;
+}
+
+html.light .card-glass {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: #d7e1ee;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.07);
+}
+
+html.light .tag {
+  background: #f8fafc;
+  border-color: #d7e1ee;
+  color: #334155;
+}
+
+html.light .grain::before {
+  opacity: 0.4;
 }

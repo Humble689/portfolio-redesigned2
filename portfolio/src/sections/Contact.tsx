@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { AlertCircle, BrainCircuit, CheckCircle, Github, Linkedin, Mail, Send } from 'lucide-react';
 import { personal } from '../data/content';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -86,11 +86,21 @@ export default function Contact() {
               </div>
 
               {/* Response time note */}
-              <div className="card-glass p-4 flex items-center gap-3">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shrink-0" />
-                <p className="text-slate-400 text-sm">
-                  Usually responds within 24 hours
-                </p>
+              <div className="rounded-2xl border border-slate-200/80 bg-white/85 px-4 py-4 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur-md dark:border-cyan-400/15 dark:bg-slate-950/55 dark:shadow-[0_0_24px_rgba(34,211,238,0.06)]">
+                <div className="flex items-start gap-3">
+                  <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300/80 bg-slate-50 text-slate-700 shrink-0 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-300">
+                    <BrainCircuit size={18} />
+                    <span className="absolute inset-0 rounded-xl border border-white/40 animate-pulse dark:border-cyan-300/15" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-mono uppercase tracking-[0.28em] text-slate-500 mb-1 dark:text-cyan-300/75">
+                      Response note
+                    </p>
+                    <p className="text-slate-700 text-sm dark:text-slate-300">
+                      Usually responds within 24 hours
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
