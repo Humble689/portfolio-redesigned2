@@ -27,6 +27,27 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleScrollActive = () => {
+      // Find which section is currently in view
+      for (const link of links) {
+        const sectionId = link.href.slice(1); // Remove '#' from href
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // If section is in viewport (within 150px of top for better detection)
+          if (rect.top <= 150 && rect.bottom > 0) {
+            setActive(link.href);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScrollActive, { passive: true });
+    return () => window.removeEventListener('scroll', handleScrollActive);
+  }, []);
+
   const handleNav = (href: string) => {
     setActive(href);
     setMobileOpen(false);
