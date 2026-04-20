@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Moon, Sparkles, Sun, Download } from 'lucide-react';
+import { Briefcase, Moon, Sun, Download } from 'lucide-react';
 import type { Theme } from '../hooks/useTheme';
 
 const links = [
@@ -76,8 +76,8 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
           }`}
           aria-label="LMT home"
         >
-          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gold-500/40 bg-gold-500/10 text-gold-300 shadow-[0_0_18px_rgba(245,158,11,0.25)] transition-all duration-300 group-hover:scale-105 group-hover:border-gold-400/70 group-hover:shadow-[0_0_24px_rgba(245,158,11,0.45)]">
-            <Sparkles size={15} strokeWidth={2.3} />
+          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg border border-fuchsia-500/40 bg-fuchsia-500/10 text-fuchsia-300 shadow-[0_0_18px_rgba(217,70,239,0.24)] transition-all duration-300 group-hover:scale-105 group-hover:border-fuchsia-400/70 group-hover:shadow-[0_0_26px_rgba(217,70,239,0.45)]">
+            <Briefcase size={15} strokeWidth={2.3} />
           </span>
           <span>
             LMT<span className="text-gold-400">.</span>

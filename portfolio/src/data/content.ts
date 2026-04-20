@@ -51,7 +51,7 @@ export const skills = [
   },
   {
     category: 'Tools & DevOps',
-    items: ['Git/GitHub', 'VS Code', 'Docker', 'Linux', 'Firebase', 'Vite'],
+    items: ['Git', 'GitHub', 'VS Code', 'Docker', 'Linux', 'Firebase', 'Vite'],
     iconKey: 'devops',
   },
 ];
