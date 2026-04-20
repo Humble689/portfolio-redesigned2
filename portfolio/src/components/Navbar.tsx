@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Moon, Sparkles, Sun } from 'lucide-react';
+import { Moon, Sparkles, Sun, Download } from 'lucide-react';
 import type { Theme } from '../hooks/useTheme';
 
 const links = [
@@ -97,6 +97,20 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
           </li>
           <li>
             <a
+              href="/Lufene_Mark_Travis_Resume.pdf"
+              download="Lufene_Mark_Travis_Resume.pdf"
+              className={`inline-flex items-center gap-2 px-4 py-2 border text-sm font-medium rounded-lg transition-all duration-200 ${
+                theme === 'dark'
+                  ? 'border-slate-600 text-slate-300 hover:bg-slate-800/50 hover:border-gold-500/40'
+                  : 'border-slate-300 text-slate-700 hover:bg-slate-100 hover:border-gold-500/40'
+              }`}
+            >
+              <Download size={16} />
+              CV
+            </a>
+          </li>
+          <li>
+            <a
               href="mailto:marktravis689@gmail.com"
               className="px-4 py-2 border border-gold-500/50 text-gold-400 text-sm font-medium rounded-lg hover:bg-gold-500/10 transition-all duration-200"
             >
@@ -156,6 +170,18 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/Lufene_Mark_Travis_Resume.pdf"
+                  download="Lufene_Mark_Travis_Resume.pdf"
+                  className={`inline-flex items-center gap-2 font-medium transition-colors ${
+                    theme === 'dark' ? 'text-slate-300 hover:text-gold-400' : 'text-slate-700 hover:text-gold-700'
+                  }`}
+                >
+                  <Download size={16} />
+                  Download CV
+                </a>
+              </li>
               <li>
                 <a
                   href="mailto:marktravis689@gmail.com"

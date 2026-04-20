@@ -61,15 +61,15 @@ export default function Hero() {
         >
           {/* Badge */}
           <motion.div variants={stagger.item} className="mb-6 flex justify-center">
-            <div className="inline-flex items-center gap-3 rounded-full border border-slate-200/80 bg-white/85 px-4 py-2 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur-md dark:border-cyan-400/20 dark:bg-slate-950/70 dark:shadow-[0_0_30px_rgba(34,211,238,0.08)]">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-slate-300/80 bg-slate-50 text-slate-700 dark:border-cyan-400/25 dark:bg-cyan-400/10 dark:text-cyan-300">
+            <div className="inline-flex items-center gap-3 rounded-full border border-slate-200/80 bg-white/85 px-4 py-2 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur-md dark:border-gold-500/30 dark:bg-gold-500/5 dark:shadow-[0_0_30px_rgba(245,158,11,0.12)]">
+              <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-slate-300/80 bg-slate-50 text-slate-700 dark:border-gold-500/40 dark:bg-gold-500/10 dark:text-gold-300">
                 <BrainCircuit size={16} />
-                <span className="absolute inset-0 rounded-full border border-white/40 animate-pulse dark:border-cyan-300/20" />
+                <span className="absolute inset-0 rounded-full border border-white/40 animate-pulse dark:border-gold-400/30" />
               </span>
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-100">
+              <span className="text-sm font-medium text-slate-700 dark:text-gold-200">
                 Available for opportunities
               </span>
-              <Sparkles size={14} className="text-amber-500/70 dark:text-cyan-300/70" />
+              <Sparkles size={14} className="text-amber-500/70 dark:text-gold-300/80" />
             </div>
           </motion.div>
 
