@@ -20,5 +20,15 @@ export default defineConfig({
     },
   ],
   base: '/', // Use '/' for custom domain
+  server: {
+    host: '0.0.0.0',
+    port: 8080,
+    strictPort: true,
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 8080,
+    strictPort: true,
+  },
 })
 

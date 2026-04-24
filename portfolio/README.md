@@ -16,14 +16,14 @@ Modern developer portfolio built with **React + TypeScript + Tailwind CSS + Fram
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
+npm run dev        # http://localhost:8080
 ```
 
 ## 📦 Build for Production
 
 ```bash
 npm run build      # outputs to /dist
-npm run preview    # preview the production build
+npm run preview    # preview the production build on http://localhost:8080
 ```
 
 ## 🌐 Deploy to Vercel (Recommended)

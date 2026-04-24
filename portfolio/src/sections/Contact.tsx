@@ -114,8 +114,8 @@ export default function Contact() {
               className="space-y-4"
             >
               {[
-                { name: 'name', label: 'Your Name', type: 'text', placeholder: 'John Doe' },
-                { name: 'email', label: 'Email Address', type: 'email', placeholder: 'john@example.com' },
+                { name: 'name', label: 'Your Name', type: 'text', placeholder: 'Alex Morgan' },
+                { name: 'email', label: 'Email Address', type: 'email', placeholder: 'alex@example.com' },
               ].map((field) => (
                 <div key={field.name}>
                   <label className="block text-xs font-mono text-slate-400 mb-1.5 uppercase tracking-widest">
