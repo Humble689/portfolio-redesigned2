@@ -59,6 +59,22 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    title: 'CineQuest: Movie Discovery Platform',
+    description: 'A full-stack movie discovery experience that helps users find what to watch through trending lists, mood-based recommendations, genre browsing, watchlists, comparisons, and personalized suggestions powered by TMDB data.',
+    tags: ['Next.js', 'TypeScript', 'Django REST Framework', 'PostgreSQL', 'TMDB API', 'Tailwind CSS'],
+    github: 'https://github.com/Humble689/CineQuest-',
+    demo: 'https://cinequeatexam.vercel.app/',
+    featured: true,
+    status: 'Live Project',
+    highlights: [
+      'Live deployment with movie browsing and search',
+      'Mood-based discovery and personalized recommendations',
+      'Watchlist, compare, and trailer viewing features',
+      'Built with a Next.js frontend and Django REST API',
+    ],
+  },
+  {
+    id: 2,
     title: 'Vanguard: ML Network Intrusion Detection System',
     description: 'A hybrid machine learning–powered NIDS targeting Ugandan SMEs. Combines supervised and unsupervised models to detect known and zero-day threats by analyzing network traffic in real time with a React/WebSocket dashboard.',
     tags: ['Python', 'Scikit-learn', 'FastAPI', 'React', 'Scapy', 'Wireshark'],
@@ -74,7 +90,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Job Portal: Full-Stack Platform',
     description: 'A full-stack web application connecting job seekers with employers through a streamlined, role-based interface. Features user authentication, job listings management, and application tracking.',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript'],
@@ -90,7 +106,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'AI Study Buddy',
     description: 'An intelligent study assistant powered by Agentic AI. Automates learning workflows, generates practice questions, and provides dynamic educational support tailored to study material.',
     tags: ['Python', 'Agentic AI', 'NLP', 'Automation'],
@@ -106,7 +122,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'AgroSmart Database',
     description: 'A structured relational database system for managing and optimizing agricultural data. Designed to support data-driven decisions for farm management, inventory, and yield tracking.',
     tags: ['SQL', 'PostgreSQL', 'Database Design', 'ERD'],
@@ -121,7 +137,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Hashing Algorithm Implementation',
     description: 'A low-level C implementation of cryptographic hashing algorithms demonstrating core computer science principles of data integrity, security, and systems programming.',
     tags: ['C', 'Cryptography', 'Systems Programming'],
