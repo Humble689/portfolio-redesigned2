@@ -104,13 +104,26 @@ export default function Projects() {
                   </div>
 
                   {project.cover && (
-                    <div className="mb-4 overflow-hidden rounded-md">
-                      <img
-                        src={project.cover}
-                        alt={`${project.title} cover`}
-                        className="w-full h-44 object-cover rounded-md"
-                      />
-                    </div>
+                    (project.id === 4 || project.id === 1) ? (
+                      <div className="mb-4 overflow-hidden rounded-md" style={{ aspectRatio: '16/9' }}>
+                        <img
+                          src={project.cover}
+                          alt={`${project.title} cover`}
+                          className="w-full h-full object-contain rounded-md bg-ink-900"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className="mb-4 overflow-hidden rounded-md"
+                        style={{ aspectRatio: '16/9' }}
+                      >
+                        <img
+                          src={project.cover}
+                          alt={`${project.title} cover`}
+                          className="w-full h-full object-cover rounded-md"
+                        />
+                      </div>
+                    )
                   )}
 
                   {/* Title */}
