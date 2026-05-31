@@ -64,7 +64,6 @@ export const projects = [
     tags: ['Next.js', 'TypeScript', 'Django REST Framework', 'PostgreSQL', 'TMDB API', 'Tailwind CSS'],
     github: 'https://github.com/Humble689/CineQuest-',
     demo: 'https://cinequeatexam.vercel.app/',
-    cover: '/images/cinequest.png',
     featured: true,
     status: 'Live Project',
     highlights: [
@@ -113,7 +112,6 @@ export const projects = [
     tags: ['Python', 'Agentic AI', 'NLP', 'Automation'],
     github: 'https://github.com/Humble689/study-buddy',
     demo: 'https://uganda-cs-study-buddy-892028429960.europe-west2.run.app/',
-    cover: '/images/study-buddy.png',
     featured: true,
     status: 'In Progress',
     highlights: [

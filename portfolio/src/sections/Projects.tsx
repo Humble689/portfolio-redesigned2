@@ -103,11 +103,13 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  {project.cover && (
-                    (project.id === 4 || project.id === 1) ? (
+                  {(() => {
+                    const cover = (project as any).cover;
+                    if (!cover) return null;
+                    return (project.id === 4 || project.id === 1) ? (
                       <div className="mb-4 overflow-hidden rounded-md" style={{ aspectRatio: '16/9' }}>
                         <img
-                          src={project.cover}
+                          src={cover}
                           alt={`${project.title} cover`}
                           className="w-full h-full object-contain rounded-md bg-ink-900"
                         />
@@ -118,13 +120,13 @@ export default function Projects() {
                         style={{ aspectRatio: '16/9' }}
                       >
                         <img
-                          src={project.cover}
+                          src={cover}
                           alt={`${project.title} cover`}
                           className="w-full h-full object-cover rounded-md"
                         />
                       </div>
-                    )
-                  )}
+                    );
+                  })()}
 
                   {/* Title */}
                   <h3 className="font-display text-xl font-bold text-white mb-3 group-hover:text-gold-200 transition-colors leading-snug">
