@@ -64,6 +64,7 @@ export const projects = [
     tags: ['Next.js', 'TypeScript', 'Django REST Framework', 'PostgreSQL', 'TMDB API', 'Tailwind CSS'],
     github: 'https://github.com/Humble689/CineQuest-',
     demo: 'https://cinequeatexam.vercel.app/',
+    cover: '/images/cinequest.png',
     featured: true,
     status: 'Live Project',
     highlights: [
@@ -111,7 +112,8 @@ export const projects = [
     description: 'An intelligent study assistant powered by Agentic AI. Automates learning workflows, generates practice questions, and provides dynamic educational support tailored to study material.',
     tags: ['Python', 'Agentic AI', 'NLP', 'Automation'],
     github: 'https://github.com/Humble689/study-buddy',
-    demo: null,
+    demo: 'https://uganda-cs-study-buddy-892028429960.europe-west2.run.app/',
+    cover: '/images/study-buddy.png',
     featured: true,
     status: 'In Progress',
     highlights: [

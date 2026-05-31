@@ -103,6 +103,16 @@ export default function Projects() {
                     </div>
                   </div>
 
+                  {project.cover && (
+                    <div className="mb-4 overflow-hidden rounded-md">
+                      <img
+                        src={project.cover}
+                        alt={`${project.title} cover`}
+                        className="w-full h-44 object-cover rounded-md"
+                      />
+                    </div>
+                  )}
+
                   {/* Title */}
                   <h3 className="font-display text-xl font-bold text-white mb-3 group-hover:text-gold-200 transition-colors leading-snug">
                     {project.title}
