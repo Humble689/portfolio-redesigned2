@@ -50,7 +50,7 @@ export default function Skills() {
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-white">
               Tools of the
               <br />
-              <span className="text-gradient">trade</span>
+              <span className="text-gold-400">trade</span>
             </h2>
           </div>
 
