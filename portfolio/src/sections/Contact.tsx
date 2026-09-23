@@ -90,7 +90,6 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300/80 bg-slate-50 text-slate-700 shrink-0 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-300">
                     <BrainCircuit size={18} />
-                    <span className="absolute inset-0 rounded-xl border border-white/40 animate-pulse dark:border-cyan-300/15" />
                   </span>
                   <div>
                     <p className="text-[10px] font-mono uppercase tracking-[0.28em] text-slate-500 mb-1 dark:text-cyan-300/75">

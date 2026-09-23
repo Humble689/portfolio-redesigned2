@@ -75,6 +75,22 @@ export const projects = [
   },
   {
     id: 2,
+    title: 'Kora: School Finance & Administration Platform',
+    description: 'A Yii2 web application for managing school payments, administration, and day-to-day finance operations, with role-based tools for administrators, bursars, teachers, canteen staff, and platform admins.',
+    tags: ['PHP', 'Yii2', 'MySQL', 'Docker', 'mPDF'],
+    github: 'https://github.com/Humble689/Kora',
+    demo: 'https://kora-m3ps.onrender.com/site/index',
+    featured: true,
+    status: 'Live Project',
+    highlights: [
+      'Student registration, balances, and wallet management',
+      'Term billing, rollovers, and payment reconciliation',
+      'Point-of-sale device registration and sync',
+      'Role-based access across admin, bursar, teacher, and canteen roles',
+    ],
+  },
+  {
+    id: 3,
     title: 'Vanguard: ML Network Intrusion Detection System',
     description: 'A hybrid machine learning–powered NIDS targeting Ugandan SMEs. Combines supervised and unsupervised models to detect known and zero-day threats by analyzing network traffic in real time with a React/WebSocket dashboard.',
     tags: ['Python', 'Scikit-learn', 'FastAPI', 'React', 'Scapy', 'Wireshark'],
@@ -90,7 +106,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Job Portal: Full-Stack Platform',
     description: 'A full-stack web application connecting job seekers with employers through a streamlined, role-based interface. Features user authentication, job listings management, and application tracking.',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript'],
@@ -106,7 +122,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'AI Study Buddy',
     description: 'An intelligent study assistant powered by Agentic AI. Automates learning workflows, generates practice questions, and provides dynamic educational support tailored to study material.',
     tags: ['Python', 'Agentic AI', 'NLP', 'Automation'],
@@ -122,7 +138,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'AgroSmart Database',
     description: 'A structured relational database system for managing and optimizing agricultural data. Designed to support data-driven decisions for farm management, inventory, and yield tracking.',
     tags: ['SQL', 'PostgreSQL', 'Database Design', 'ERD'],
@@ -137,7 +153,7 @@ export const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Hashing Algorithm Implementation',
     description: 'A low-level C implementation of cryptographic hashing algorithms demonstrating core computer science principles of data integrity, security, and systems programming.',
     tags: ['C', 'Cryptography', 'Systems Programming'],

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BrainCircuit, Download, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
+import { Download, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { personal } from '../data/content';
 
 const stagger = {
@@ -18,39 +18,14 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background */}
       <div className="absolute inset-0 bg-ink-950">
-        {/* Radial glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-900/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-ink-700/30 rounded-full blur-3xl" />
-
-        {/* Grid pattern */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.025]"
           style={{
-            backgroundImage: 'linear-gradient(rgba(251,191,36,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(251,191,36,0.8) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(175,146,87,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(175,146,87,0.8) 1px, transparent 1px)',
             backgroundSize: '80px 80px',
           }}
         />
       </div>
-
-      {/* Floating accent elements */}
-      <motion.div
-        className="absolute top-32 right-16 w-2 h-2 bg-gold-400 rounded-full hidden lg:block"
-        animate={{ y: [0, -15, 0], opacity: [0.6, 1, 0.6] }}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute bottom-48 left-20 w-1 h-1 bg-gold-300 rounded-full hidden lg:block"
-        animate={{ y: [0, 10, 0], opacity: [0.4, 0.8, 0.4] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-      />
-      <motion.div
-        className="absolute top-1/3 left-12 hidden lg:flex items-center gap-2 opacity-20"
-        animate={{ x: [0, 5, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <span className="font-mono text-xs text-gold-400">{'// init()'}</span>
-      </motion.div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -61,15 +36,11 @@ export default function Hero() {
         >
           {/* Badge */}
           <motion.div variants={stagger.item} className="mb-6 flex justify-center">
-            <div className="inline-flex items-center gap-3 rounded-full border border-slate-200/80 bg-white/85 px-4 py-2 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur-md dark:border-gold-500/30 dark:bg-gold-500/5 dark:shadow-[0_0_30px_rgba(245,158,11,0.12)]">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-slate-300/80 bg-slate-50 text-slate-700 dark:border-gold-500/40 dark:bg-gold-500/10 dark:text-gold-300">
-                <BrainCircuit size={16} />
-                <span className="absolute inset-0 rounded-full border border-white/40 animate-pulse dark:border-gold-400/30" />
-              </span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white/85 px-4 py-1.5 dark:border-ink-600 dark:bg-ink-800/60">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
               <span className="text-sm font-medium text-slate-700 dark:text-gold-200">
                 Available for opportunities
               </span>
-              <Sparkles size={14} className="text-amber-500/70 dark:text-gold-300/80" />
             </div>
           </motion.div>
 
@@ -80,7 +51,7 @@ export default function Hero() {
           >
             <span className="text-white">Lufene</span>{' '}
             <br className="sm:hidden" />
-            <span className="text-gradient">Mark Travis</span>
+            <span className="text-gold-400">Mark Travis</span>
           </motion.h1>
 
           {/* Role */}
