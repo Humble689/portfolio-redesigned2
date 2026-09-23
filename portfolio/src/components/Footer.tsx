@@ -46,9 +46,7 @@ export default function Footer() {
           </div>
 
           <p className="text-slate-600 text-xs font-mono text-center sm:text-right">
-            Built with React + Tailwind CSS
             <br />
-            Deployed on Vercel
           </p>
         </div>
       </div>

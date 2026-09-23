@@ -34,15 +34,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
         >
-          {/* Badge */}
-          <motion.div variants={stagger.item} className="mb-6 flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white/85 px-4 py-1.5 dark:border-ink-600 dark:bg-ink-800/60">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              <span className="text-sm font-medium text-slate-700 dark:text-gold-200">
-                Available for opportunities
-              </span>
-            </div>
-          </motion.div>
+         
 
           {/* Name */}
           <motion.h1
