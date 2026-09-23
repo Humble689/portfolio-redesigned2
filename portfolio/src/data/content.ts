@@ -17,7 +17,7 @@ export const about = {
 What drives me is building things that matter, whether that's a machine-learning intrusion detection system protecting SME networks, a gym management platform for a business in South Sudan, or contributing to data quality for international research. I bring an infrastructure-first mindset: reliability, security, and scalability from the ground up.`,
   highlights: [
     { label: 'Projects Built', value: '10+' },
-    { label: 'Repositories', value: '54' },
+    { label: 'Repositories', value: '69' },
     { label: 'Certifications', value: '3' },
     { label: 'Countries Reached', value: '3' },
   ],
@@ -156,6 +156,19 @@ export const projects = [
 export const experience = [
   {
     id: 1,
+    role: 'Software Development Intern',
+    company: 'Service Cops',
+    period: '2025 – Present',
+    type: 'Internship',
+    description: 'Building and maintaining features on a PHP/Yii2 codebase, including a Dev.to clone project, while producing weekly progress reports.',
+    achievements: [
+      'Built CRUD functionality using Yii2 and Gii code generation',
+      'Contributed to a Dev.to clone built on the Yii2 framework',
+      'Delivered structured weekly progress reports on shipped work',
+    ],
+  },
+  {
+    id: 2,
     role: 'Digital Growth Support Intern',
     company: 'Absa Bank Uganda',
     period: 'Jun 2025 – Aug 2025',
@@ -169,7 +182,7 @@ export const experience = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     role: 'Data Quality Analyst (Volunteer)',
     company: 'Statistics Without Borders',
     period: 'Jan 2025 – Present',
@@ -183,7 +196,7 @@ export const experience = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     role: 'Property Manager',
     company: 'Jokolera Estate',
     period: '2023 – 2024',
