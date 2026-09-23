@@ -13,9 +13,9 @@ export default function About() {
           <div className="mb-16">
             <p className="font-mono text-gold-500 text-sm mb-3 tracking-widest uppercase">01 / About</p>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-white">
-              The person behind
+              Background
               <br />
-              <span className="text-gradient">the keyboard</span>
+              <span className="text-gold-400">&amp; approach</span>
             </h2>
           </div>
 
