@@ -1,7 +1,20 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Briefcase, Moon, Sun, Download } from 'lucide-react';
+import {Briefcase, Moon, Sun, Download, Building2  } from 'lucide-react';
 import type { Theme } from '../hooks/useTheme';
+
+// components/icons/BatIcon.tsx
+export const BatIcon = ({ size = 15 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12 3c.6 1.1 1.1 1.9 2.2 2.4.3-.9.9-1.6 1.8-2 .1 1 .1 1.8-.2 2.7 1.8-.3 3.3-1.1 4.7-2.4-.3 2.1-1.5 3.7-3.2 4.9 1.6.1 2.9.7 4.2 1.6-1.9.5-3.5.5-5.3.1.9.9 1.4 1.9 1.6 3.1-1.3-.7-2.4-1.4-3.2-2.6-.2 1.5-.7 2.7-1.7 3.9-.2-1.3-.5-2.3-1.1-3.4-.6 1.1-.9 2.1-1.1 3.4-1-1.2-1.5-2.4-1.7-3.9-.8 1.2-1.9 1.9-3.2 2.6.2-1.2.7-2.2 1.6-3.1-1.8.4-3.4.4-5.3-.1 1.3-.9 2.6-1.5 4.2-1.6-1.7-1.2-2.9-2.8-3.2-4.9 1.4 1.3 2.9 2.1 4.7 2.4-.3-.9-.3-1.7-.2-2.7.9.4 1.5 1.1 1.8 2C10.9 4.9 11.4 4.1 12 3z" />
+  </svg>
+);
 
 const links = [
   { label: 'About', href: '#about' },
@@ -76,8 +89,10 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
           }`}
           aria-label="LMT home"
         >
-          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg border border-fuchsia-500/40 bg-fuchsia-500/10 text-fuchsia-300 shadow-[0_0_18px_rgba(217,70,239,0.24)] transition-all duration-300 group-hover:scale-105 group-hover:border-fuchsia-400/70 group-hover:shadow-[0_0_26px_rgba(217,70,239,0.45)]">
-            <Briefcase size={15} strokeWidth={2.3} />
+
+          
+          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg border">
+            <BatIcon size={15} />
           </span>
           <span>
             LMT<span className="text-gold-400">.</span>

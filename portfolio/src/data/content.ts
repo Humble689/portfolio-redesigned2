@@ -26,17 +26,17 @@ What drives me is building things that matter, whether that's a machine-learning
 export const skills = [
   {
     category: 'Languages',
-    items: ['Python', 'JavaScript', 'SQL', 'C', 'HTML/CSS', 'LaTeX'],
+    items: ['Python', 'JavaScript', 'SQL', 'postgresql', 'C', 'HTML/CSS', 'LaTeX'],
     iconKey: 'languages',
   },
   {
     category: 'Frontend',
-    items: ['React', 'Tailwind CSS', 'Responsive Design', 'UI/UX'],
+    items: ['React', 'Tailwind CSS','bootstrap', 'Responsive Design', 'UI/UX'],
     iconKey: 'frontend',
   },
   {
     category: 'Backend & Data',
-    items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Scikit-learn', 'TensorFlow', 'Pandas'],
+    items: ['Node.js', 'Express', 'Yii2', 'PostgreSQL', 'Scikit-learn', 'TensorFlow', 'Pandas'],
     iconKey: 'backend',
   },
   {
@@ -77,16 +77,16 @@ export const projects = [
     id: 2,
     title: 'Kora: School Finance & Administration Platform',
     description: 'A Yii2 web application for managing school payments, administration, and day-to-day finance operations, with role-based tools for administrators, bursars, teachers, canteen staff, and platform admins.',
-    tags: ['PHP', 'Yii2', 'MySQL', 'Docker', 'mPDF'],
+    tags: ['PHP', 'Yii2 framework', 'postgreSQL', 'Docker', 'mPDF'],
     github: 'https://github.com/Humble689/Kora',
     demo: 'https://kora-m3ps.onrender.com/site/index',
-    featured: true,
+    featured: false,
     status: 'Live Project',
     highlights: [
-      'Student registration, balances, and wallet management',
+      'School financial management, balances, and wallet management',
       'Term billing, rollovers, and payment reconciliation',
       'Point-of-sale device registration and sync',
-      'Role-based access across admin, bursar, teacher, and canteen roles',
+      'Role-based access across superadmin, schooladmin, bursar, teacher, dos and canteen roles',
     ],
   },
   {
@@ -174,7 +174,7 @@ export const experience = [
     id: 1,
     role: 'Software Development Intern',
     company: 'Service Cops',
-    period: '2025 – Present',
+    period: '2026 June – September 2026',
     type: 'Internship',
     description: 'Building and maintaining features on a PHP/Yii2 codebase, including a Dev.to clone project, while producing weekly progress reports.',
     achievements: [
@@ -197,22 +197,22 @@ export const experience = [
       'Participated in customer digital onboarding initiatives',
     ],
   },
+  // {
+  //   id: 3,
+  //   role: 'Data Quality Analyst (Volunteer)',
+  //   company: 'Statistics Without Borders',
+  //   period: 'Jan 2025 – Present',
+  //   type: 'Volunteer',
+  //   description: 'Validated datasets and analytical deliverables for international pro bono statistical projects serving underserved communities.',
+  //   achievements: [
+  //     'Reviewed global datasets against statistical quality standards',
+  //     'Collaborated with international volunteer teams across time zones',
+  //     'Ensured consistency and compliance across analytical reports',
+  //     'Promoted rigorous data practices in open statistical projects',
+  //   ],
+  // },
   {
     id: 3,
-    role: 'Data Quality Analyst (Volunteer)',
-    company: 'Statistics Without Borders',
-    period: 'Jan 2025 – Present',
-    type: 'Volunteer',
-    description: 'Validated datasets and analytical deliverables for international pro bono statistical projects serving underserved communities.',
-    achievements: [
-      'Reviewed global datasets against statistical quality standards',
-      'Collaborated with international volunteer teams across time zones',
-      'Ensured consistency and compliance across analytical reports',
-      'Promoted rigorous data practices in open statistical projects',
-    ],
-  },
-  {
-    id: 4,
     role: 'Property Manager',
     company: 'Jokolera Estate',
     period: '2023 – 2024',
@@ -231,7 +231,7 @@ export const education = [
     degree: 'Bachelor of Science in Computer Science',
     institution: 'Uganda Christian University',
     location: 'Mukono, Uganda',
-    period: '2023 – 2025',
+    period: '2023 – 2026',
     highlights: ['Final Year Project: Vanguard NIDS (ML-powered intrusion detection)', 'Volunteer Computer Technician'],
   },
   {
@@ -246,4 +246,6 @@ export const certifications = [
   { name: 'Enterprise Networking', issuer: 'Cisco', iconKey: 'networking' },
   { name: 'Agentic AI', issuer: 'Udemy', iconKey: 'ai' },
   { name: 'Conflict Resolution', issuer: 'Udemy', iconKey: 'collaboration' },
+    { name: 'Full-Stack Development', issuer: 'ServiceCop', iconKey: 'Programming' },
+
 ];

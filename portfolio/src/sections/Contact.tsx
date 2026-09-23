@@ -86,7 +86,7 @@ export default function Contact() {
               </div>
 
               {/* Response time note */}
-              <div className="rounded-2xl border border-slate-200/80 bg-white/85 px-4 py-4 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur-md dark:border-cyan-400/15 dark:bg-slate-950/55 dark:shadow-[0_0_24px_rgba(34,211,238,0.06)]">
+              {/* <div className="rounded-2xl border border-slate-200/80 bg-white/85 px-4 py-4 shadow-[0_14px_40px_rgba(15,23,42,0.08)] backdrop-blur-md dark:border-cyan-400/15 dark:bg-slate-950/55 dark:shadow-[0_0_24px_rgba(34,211,238,0.06)]">
                 <div className="flex items-start gap-3">
                   <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300/80 bg-slate-50 text-slate-700 shrink-0 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-300">
                     <BrainCircuit size={18} />
@@ -100,7 +100,7 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right form */}
@@ -113,8 +113,8 @@ export default function Contact() {
               className="space-y-4"
             >
               {[
-                { name: 'name', label: 'Your Name', type: 'text', placeholder: 'Alex Morgan' },
-                { name: 'email', label: 'Email Address', type: 'email', placeholder: 'alex@example.com' },
+                { name: 'name', label: 'Your Name', type: 'text', placeholder: 'my name' },
+                { name: 'email', label: 'Email Address', type: 'email', placeholder: 'youremail@example.com' },
               ].map((field) => (
                 <div key={field.name}>
                   <label className="block text-xs font-mono text-slate-400 mb-1.5 uppercase tracking-widest">
