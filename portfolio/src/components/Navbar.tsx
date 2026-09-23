@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {Briefcase, Moon, Sun, Download, Building2  } from 'lucide-react';
+import { Moon, Sun, Download, } from 'lucide-react';
 import type { Theme } from '../hooks/useTheme';
 
 // components/icons/BatIcon.tsx

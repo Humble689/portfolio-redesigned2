@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { AlertCircle, BrainCircuit, CheckCircle, Github, Linkedin, Mail, Send } from 'lucide-react';
+import { AlertCircle, CheckCircle, Github, Linkedin, Mail, Send } from 'lucide-react';
 import { personal } from '../data/content';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
